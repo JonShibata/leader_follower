@@ -1,0 +1,22 @@
+
+source /opt/ros/jazzy/setup.zsh
+
+rm -rf build install log coverage_report
+
+colcon build --cmake-args -DCMAKE_BUILD_TYPE=Debug
+
+source install/setup.zsh
+
+colcon test
+
+lcov --capture --directory build/turtle2 --output-file coverage_raw.info --ignore-errors mismatch
+
+lcov --remove coverage_raw.info "/usr/*" "*/test/*" "/ros/*" "*/rclcpp/*" --output-file coverage_filtered.info 
+
+genhtml coverage_filtered.info --output-directory coverage_report
+
+cd coverage_report
+
+exp index.html
+
+cd ..

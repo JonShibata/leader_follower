@@ -1,0 +1,7 @@
+
+
+colcon build
+
+source install/setup.zsh
+
+ros2 launch sim_launch sim_launch.py    

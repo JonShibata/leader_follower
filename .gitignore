@@ -1,0 +1,13 @@
+
+/build/
+/install/
+/log/
+/src/sim_launch/test/__pycache__/
+/src/turtle_control/test/__pycache__/
+/src/turtle_control/turtle_control/__pycache__/
+/src/sim_launch/launch/build/
+/src/sim_launch/launch/install/
+/src/sim_launch/launch/log/
+.coverage*
+/coverage_report/
+coverage*

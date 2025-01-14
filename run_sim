@@ -1,0 +1,9 @@
+
+
+# . ./install/setup.zsh
+
+# ros2 run turtlesim turtlesim_node &
+
+# ros2 service call /spawn turtlesim/srv/Spawn "{x: 1.0, y: 1.0, theta: 0.0, name: 'leader'}"
+
+ros2 launch sim_launch sim_launch.py
